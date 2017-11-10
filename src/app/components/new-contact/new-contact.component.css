@@ -1,0 +1,12 @@
+.full-width {
+  width: 100%;
+}
+
+md-card {
+  box-shadow: none!important;
+  width: 500px;
+}
+
+md-card-actions {
+  margin: 0;
+}

@@ -1,0 +1,29 @@
+<md-card>
+  <md-card-title>
+    New Contact
+  </md-card-title>
+  <md-card-content>
+    <md-input-container class="full-width">
+      <input type="text" mdInput placeholder="Name" [(ngModel)]="contact.name" name="name">
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input type="email" mdInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="contact.email" name="email">
+      <md-error *ngIf="emailFormControl.hasError('pattern')">
+        Please enter a valid email address
+      </md-error>
+      <md-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </md-error>
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input type="text" mdInput placeholder="Website" [(ngModel)]="contact.website" name="website">
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input type="text" mdInput placeholder="Phone" [(ngModel)]="contact.phone" name="phone">
+    </md-input-container>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button md-dialog-close (click)="addContact()" color="primary">Add Contact</button>
+    <button md-raised-button md-dialog-close color="secondary">Cancel</button>
+  </md-card-actions>
+</md-card>

@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  background-color: hsl(217, 100%, 85%);
+  background-image: radial-gradient( at 50% top, hsl(217, 100%, 85%) 0%,hsl(217, 90%, 75%) 75%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+}

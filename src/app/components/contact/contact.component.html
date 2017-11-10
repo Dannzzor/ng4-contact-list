@@ -1,0 +1,29 @@
+<div class="content">
+  <div class="outter-header">
+    <div class="wrapper header-wrapper">
+      <span class="spacer"></span>
+      <button md-raised-button (click)="openDialog()">New Contact</button>
+    </div>
+  </div>
+  <div class="wrapper card-wrapper">
+    <md-card *ngFor="let contact of contacts | async" class="contact-card">
+      <md-card-content>
+        <button md-button (click)="removeContact(contact)" class="delete-contact"><i class="material-icons">clear</i></button>
+        <img src="https://randomuser.me/api/portraits/{{ !!((contact.id *3)%2) ? 'men' : 'women' }}/{{contact.id}}.jpg" class="header-image">
+        <div class="title">
+          {{contact.name}}
+        </div>
+        <div class="subtitle">
+          {{contact.company?.name}}
+        </div>
+        <div class="subtitle">
+          {{contact.phone}}
+        </div>
+      </md-card-content>
+      <md-card-actions>
+        <a href="{{contact.website}}" md-button><i class="material-icons">link</i></a>
+        <a href="mailto:{{contact.email}}" md-button><i class="material-icons">email</i></a>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

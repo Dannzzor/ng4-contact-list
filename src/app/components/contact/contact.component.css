@@ -1,0 +1,79 @@
+.content {
+  margin: 20px auto;
+  max-width: 90%;
+  background: #f4f4f4;
+  overflow: hidden;
+  box-shadow: 0 3px 18px rgba(0,0,0,0.3);
+  padding-bottom: 50px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.outter-header {
+  width: 100%;
+  overflow: hidden;
+  background: hsl(217, 100%, 65%);
+}
+
+.header-wrapper {
+  height: 64px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.outter-header button {
+  float: right;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-card {
+  width: 220px;
+  margin-top: 20px;
+}
+
+.header-image {
+  border-radius: 50%;
+  border: 1px solid #ebebeb;
+  display: block;
+  margin: 20px auto;
+}
+.title, .subtitle {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.4em;
+}
+
+.subtitle {
+  color: #aaa;
+}
+
+.delete-contact {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  min-width: 20px;
+}
+
+md-card-actions {
+  display: flex;
+  justify-content: space-around;
+}
